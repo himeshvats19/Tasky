@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import { setLocalNotification } from './utils'
 
 import DeckList from './components/DeckList'
 import DeckView from './components/DeckView'
@@ -34,6 +35,9 @@ function MainStackScreen() {
 }
 
 export default class App extends React.Component {
+  componentDidMount(){
+    setLocalNotification()
+  }
   render(){
     return (
       <NavigationContainer>

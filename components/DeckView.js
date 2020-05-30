@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import {setLocalNotification, clearLocalNotification} from '../utils'
 
 
 function DeckView({ route, navigation }){
@@ -27,9 +28,13 @@ function DeckView({ route, navigation }){
   }
 
   function startQuiz(deck, navigation){
+    clearLocalNotification()
+      .then(setLocalNotification)
+      
     navigation.navigate('QuizModalScreen', {
       params: deck
     });
+
   }
 
   const styles = StyleSheet.create({
