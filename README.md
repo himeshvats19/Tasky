@@ -1,4 +1,4 @@
-# UdacityMobileFlashCards
+# Tasky
 
 - Dependancies Managed my npm install
 - Switch t ios directory and run pod install
